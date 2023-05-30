@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Books API</title>
+    <script src="books.js"></script>
+    <style>
+        * {font-family: sans-serif;}
+        html {
+            background-image: linear-gradient(green, #014421);
+            height: 100%;
+            width: 100%;
+        }
+        h1 {color: white;}
+        div {margin-bottom: 1em;}
+        select {
+            padding: .5em;
+        }
+        input[type=button] {
+            cursor: pointer;
+            padding: 1.5em;
+            background-color: #F60;
+            text-transform: uppercase;
+            border: none;
+        }
+        #results {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search for a book</h1>
+    <form>
+        <div>
+            <select id="" name="">
+                <option value="">Select a genre</option>
+                <option value="">Fantasy</option>
+                <option value="">Romance</option>
+                <option value="">Sci-Fi</option>
+                <option value="">Thriller</option>
+            </select>
+        </div>
+        <div>
+            <input type="button" name="bookBtn" id="bookBtn" value="Recommend Me a Book" onclick="logJSONData()"/>
+        </div>
+    </form>
+    <div id="results"></div>
+</body>
+</html>
