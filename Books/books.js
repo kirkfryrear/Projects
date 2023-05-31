@@ -1,5 +1,5 @@
 async function logJSONData() {
-    const response = await fetch('https://openlibrary.org/api/books?bibkeys=ISBN:0451526538&format=json');
+    const response = await fetch('https://openlibrary.org/api/books?bibkeys=ISBN:0451526538');
     const jsonData = await response.json();
     console.log(jsonData);
 
