@@ -1,9 +1,8 @@
 async function logJSONData() {
-    const response = await fetch('https://openlibrary.org/api/books?bibkeys=ISBN:0451526538');
-    const jsonData = await response.json();
-    console.log(jsonData);
+    const response = await fetch("http://openlibrary.org/api/books?bibkeys=ISBN:0451526538&jscmd=data");
+    const data = await response.json;
+    const x = JSON.parse(data);
 
-    // returns string version in "results" div
-        // const jsonDataString = JSON.stringify(jsonData);
-        //document.getElementById("results").innerHTML = jsonDataString;
+    console.log(x);
+    document.getElementById("results").innerHTML = x;
 }

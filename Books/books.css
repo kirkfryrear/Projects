@@ -3,6 +3,7 @@ html {
     background-image: linear-gradient(green, #014421);
     height: 100%;
     width: 100%;
+    text-align: center;
 }
 h1 {color: white;}
 div {margin-bottom: 1em;}
@@ -11,10 +12,11 @@ select {
 }
 input[type=button] {
     cursor: pointer;
-    padding: 1.5em;
-    background-color: #F60;
+    padding: 1em;
+    background-image: linear-gradient(gold, darkorange);
+    background-color: #fb0484;
     text-transform: uppercase;
-    border: none;
+    border: solid 1px black;
 }
 #results {
     color: white;
