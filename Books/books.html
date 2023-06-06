@@ -2,14 +2,15 @@
 <html>
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Books API</title>
     <script src="books.js"></script>
     <link rel="stylesheet" href="books.css" />
 </head>
 <body>
-    <h1>Recommend Me a Book</h1>
-    <form>
-        <div>
+    <div id="container">
+        <div id="box">
+            <h1>Recommend Me a Book</h1>
             <select id="bookGenre" name="bookGenre">
                 <option value="">Select a genre</option>
                 <option value="fantasy">Fantasy</option>
@@ -18,12 +19,9 @@
                 <option value="science_fiction">Sci-Fi</option>
                 <option value="thriller">Thriller</option>
             </select>
+            <input type="button" name="bookBtn" id="bookBtn" value="Book Generator" onclick="getBook()" />
         </div>
-        <div>
-            <input type="button" name="bookBtn" id="bookBtn" value="Book Generator" onclick="getBook()"/>
-        </div>
-    </form>
-    <hr />
+    </div>
     <div id="output"></div>
 </body>
 </html>
