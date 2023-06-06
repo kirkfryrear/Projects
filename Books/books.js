@@ -12,3 +12,7 @@ function getBook() {
         }
     });
 }
+function fadeIn() {
+    //document.getElementById("output").classList.add("textfade");
+    alert("did it work?");
+}
