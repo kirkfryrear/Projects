@@ -4,19 +4,24 @@ html {
     width: 100%;
 }
 body {
-    background-color: #999;
+    background-color: #6e6e6e;
 }
 #box {
-    position: absolute;
     background-image: linear-gradient(#166, #244);
-    top: 1em;
-    left: 50%;
-    transform: translate(-50%, 0);
     padding: 2em;
     text-align: center;
     border: white solid 3px;
     border-radius: 1em;
-    transition: transform 2s ease;
+    width: 400px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 711px) {
+    #box {
+        width: 100%;
+        border-radius: 0;
+        border: 0;
+        padding: 2em 0;
+    }
 }
 h1 {
     color: white;
@@ -35,7 +40,7 @@ select {
 }
 input[type=button] {
     cursor: pointer;
-    background-image: linear-gradient(gold, darkorange);
+    background-image: linear-gradient(#ffd700, #ff8c00);
     text-transform: uppercase;
 }
 input[type=button], select {
@@ -45,26 +50,15 @@ input[type=button], select {
 #output {
     color: white;
     text-align: center;
-    animation-name: resize;
-    width: 0;
-    height: 0;
 }
-#output h2 {
+#output a {
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid white;
+}
+#output > * {
     animation-name: opacity;
-}
-#output h2, #output {
-    animation-duration: 1s;
-}
-#output .author {
-    font-style: italic;
-}
-@keyframes resize {
-    from {
-    }
-    to {
-        height: auto;
-        width: auto;
-    }
+    animation-duration: 500ms;
 }
 @keyframes opacity {
     0% {
@@ -73,5 +67,8 @@ input[type=button], select {
     100% {
         opacity: 1;
     }
+}
+#output .author {
+    font-style: italic;
 }
 
