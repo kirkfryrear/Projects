@@ -47,6 +47,9 @@ input[type=button], select {
     padding: 1em;
     border: solid 1px black;
 }
+.book-link {
+    margin-top: 1em;
+}
 #output {
     color: white;
     text-align: center;
