@@ -47,6 +47,9 @@ input[type=button], select {
     padding: 1em;
     border: solid 1px black;
 }
+.book-title {
+    text-transform: capitalize;
+}
 .book-link {
     margin-top: 1em;
 }
