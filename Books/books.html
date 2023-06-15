@@ -11,15 +11,15 @@
     <div id="container">
         <div id="box">
             <h1>Recommend Me a Book</h1>
-            <select id="bookGenre" name="bookGenre">
-                <option value="">Select a genre</option>
+            <select id="bookGenre" name="bookGenre" autocomplete="off" onchange="getCount()">
+                <option value="fiction">Select a genre</option>
                 <option value="fantasy">Fantasy</option>
                 <option value="horror">Horror</option>
                 <option value="romance">Romance</option>
                 <option value="science_fiction">Sci-Fi</option>
                 <option value="thriller">Thriller</option>
             </select>
-            <input type="button" name="bookBtn" id="bookBtn" value="Generate book" onclick="getBook()" />
+            <input type="button" name="bookBtn" id="bookBtn" value="Generate book" onclick="getBook(getCount)" />
         </div>
         <div id="output"></div>
     </div>
