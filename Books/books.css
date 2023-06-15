@@ -74,7 +74,7 @@ input[type=button], select {
         opacity: 1;
     }
 }
-#output .author {
-    font-style: italic;
+h2 {
+    line-height: 1.5em;
 }
 
