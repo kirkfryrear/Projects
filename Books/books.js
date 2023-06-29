@@ -14,10 +14,10 @@ function getBook() {
   .then(response => response.json())
   .then(response => {
     const bookUrl = "https://openlibrary.org"+response.works[0].key
+    const bookImg = "https://covers.openlibrary.org/b/id/"+response.works[0].cover_id+"-M.jpg" ? "<img class='book-image' src='https://covers.openlibrary.org/b/id/"+response.works[0].cover_id+"-M.jpg' />" : "(thumbnail unavailable)"
     const authorInfo = response.works[0].authors[0] ? " by <a target='_blank' href='https://openlibrary.org"+response.works[0].authors[0].key+" target='_blank'>"+response.works[0].authors[0].name+"</a>" : ""
-    const bookInfo = "<h2><a class='book-title' href='"+bookUrl+"' target='_blank'>"+response.works[0].title+"</a><br />"+authorInfo+" ("+response.works[0].first_publish_year+")</h2>"
+    const bookInfo = "<h2><a class='book-title' href='"+bookUrl+"' target='_blank'>"+response.works[0].title+"</a> ("+response.works[0].first_publish_year+") <br />"+authorInfo+"</h2>"+bookImg
     const bookOutput = document.getElementById("output").innerHTML+=bookInfo
     import_button.disabled = false
-    console.log(response.works[0])
   })
 }

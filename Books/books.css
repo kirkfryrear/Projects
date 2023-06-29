@@ -1,7 +1,9 @@
 * {font-family: sans-serif;}
 html {
-    height: 100%;
     width: 100%;
+    margin: 1em 0 0 0;
+    overflow-x: auto;
+    overflow-y: scroll;
 }
 body {
     background-color: #6e6e6e;
@@ -15,20 +17,12 @@ body {
     width: 400px;
     margin: 0 auto;
 }
-@media screen and (max-width: 711px) {
-    #box {
-        width: 100%;
-        border-radius: 0;
-        border: 0;
-        padding: 2em 0;
-    }
-}
 h1 {
     color: white;
     margin-top: 0;
 }
 h2 {
-    margin-bottom: 0;
+    line-height: 1.5em;
 }
 select {
     text-transform: none;
@@ -36,6 +30,15 @@ select {
 @media screen and (max-width: 711px) {
     select {
         margin-bottom: 1em;
+    }
+    body {
+        margin: 0;
+    }
+    #box {
+        width: 100%;
+        border-radius: 0;
+        border: white solid 0 3px 0;
+        padding: 2em 0;
     }
 }
 input[type=button] {
@@ -62,7 +65,7 @@ input[type=button], select {
     color: white;
     border-bottom: 1px solid white;
 }
-#output > * {
+#output * {
     animation-name: opacity;
     animation-duration: 500ms;
 }
@@ -74,7 +77,6 @@ input[type=button], select {
         opacity: 1;
     }
 }
-h2 {
-    line-height: 1.5em;
+.book-image {
+    border: 3px solid #fff;
 }
-
